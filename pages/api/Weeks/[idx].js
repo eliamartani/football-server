@@ -6,14 +6,12 @@ const Weeks = (req, res) => {
   } = req;
   const index = idx || 0;
 
-  if (index > mock.length - 1) {
-    res
-      .status(200)
-      .json({
-        error: `Week index out of range: Only between 0 ~ ${
-          mock.length - 1
-        } is allowed`,
-      });
+  if (isNaN(index) || index > mock.length - 1) {
+    res.status(200).json({
+      error: `Week index out of range: Only between 0 ~ ${
+        mock.length - 1
+      } is allowed`,
+    });
 
     return;
   }
