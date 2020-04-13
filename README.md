@@ -4,8 +4,8 @@
 
 ## API
 
-- /teams
-- /teams/:teamId
-- /logos/:teamId
-- /weeks
-- /weeks/:weekIndex
+- /api/teams
+- /api/teams/:teamId
+- /api/logos/:teamId
+- /api/weeks
+- /api/weeks/:weekIndex
