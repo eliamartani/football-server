@@ -1,4 +1,6 @@
 import mock from '../../../mock/teams.json';
+import * as fs from 'fs';
+import { join } from 'path'
 
 const Logo = async (req, res) => {
   const {
@@ -14,8 +16,10 @@ const Logo = async (req, res) => {
     return;
   }
 
-  // TODO should return image stream instead
-  res.status(200).send(response.logo);
+  const imagesDirectory = join(process.env.PROJECT_DIRNAME, 'public/images/')
+  const buffer = fs.readFileSync(`${imagesDirectory}${id}.png`)
+  res.setHeader('Content-Type', 'image/png;charset=utf-8');
+  return res.status(200).send(buffer, 'binary');
 };
 
 export default Logo;
