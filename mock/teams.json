@@ -2,7 +2,6 @@
   {
     "id": "1",
     "name": "Arsenal FC",
-    "logo": "http://localhost:3000/images/1.png",
     "results": [
       {
         "teams": ["Arsenal FC", "Leicester City"],
@@ -114,7 +113,6 @@
   {
     "id": "2",
     "name": "Brighton & Hove Albion",
-    "logo": "http://localhost:3000/images/2.png",
     "results": [
       {
         "teams": ["Brighton & Hove Albion", "Manchester City"],
@@ -226,7 +224,6 @@
   {
     "id": "3",
     "name": "Burnley FC",
-    "logo": "http://localhost:3000/images/3.png",
     "results": [
       {
         "teams": ["Chelsea FC", "Burnley FC"],
@@ -338,7 +335,6 @@
   {
     "id": "4",
     "name": "Chelsea FC",
-    "logo": "http://localhost:3000/images/4.png",
     "results": [
       {
         "teams": ["Chelsea FC", "Burnley FC"],
@@ -450,7 +446,6 @@
   {
     "id": "5",
     "name": "Crystal Palace",
-    "logo": "http://localhost:3000/images/5.png",
     "results": [
       {
         "teams": ["Crystal Palace", "Huddersfield Town"],
@@ -562,7 +557,6 @@
   {
     "id": "6",
     "name": "Everton FC",
-    "logo": "http://localhost:3000/images/6.png",
     "results": [
       {
         "teams": ["Everton FC", "Stoke City"],
@@ -674,7 +668,6 @@
   {
     "id": "7",
     "name": "Huddersfield Town",
-    "logo": "http://localhost:3000/images/7.png",
     "results": [
       {
         "teams": ["Crystal Palace", "Huddersfield Town"],
@@ -786,7 +779,6 @@
   {
     "id": "8",
     "name": "Leicester City",
-    "logo": "http://localhost:3000/images/8.png",
     "results": [
       {
         "teams": ["Arsenal FC", "Leicester City"],
@@ -898,7 +890,6 @@
   {
     "id": "9",
     "name": "Liverpool FC",
-    "logo": "http://localhost:3000/images/9.png",
     "results": [
       {
         "teams": ["Watford FC", "Liverpool FC"],
@@ -1010,7 +1001,6 @@
   {
     "id": "10",
     "name": "Manchester City",
-    "logo": "http://localhost:3000/images/10.png",
     "results": [
       {
         "teams": ["Brighton & Hove Albion", "Manchester City"],
@@ -1122,7 +1112,6 @@
   {
     "id": "11",
     "name": "Manchester United",
-    "logo": "http://localhost:3000/images/11.png",
     "results": [
       {
         "teams": ["Manchester United", "West Ham United"],
@@ -1234,7 +1223,6 @@
   {
     "id": "12",
     "name": "Newcastle United",
-    "logo": "http://localhost:3000/images/12.png",
     "results": [
       {
         "teams": ["Newcastle United", "Tottenham Hotspur"],
@@ -1346,7 +1334,6 @@
   {
     "id": "13",
     "name": "Southampton FC",
-    "logo": "http://localhost:3000/images/13.png",
     "results": [
       {
         "teams": ["Southampton FC", "Swansea City"],
@@ -1458,7 +1445,6 @@
   {
     "id": "14",
     "name": "Stoke City",
-    "logo": "http://localhost:3000/images/14.png",
     "results": [
       {
         "teams": ["Everton FC", "Stoke City"],
@@ -1570,7 +1556,6 @@
   {
     "id": "15",
     "name": "Swansea City",
-    "logo": "http://localhost:3000/images/15.png",
     "results": [
       {
         "teams": ["Southampton FC", "Swansea City"],
@@ -1682,7 +1667,6 @@
   {
     "id": "16",
     "name": "Tottenham Hotspur",
-    "logo": "http://localhost:3000/images/16.png",
     "results": [
       {
         "teams": ["Newcastle United", "Tottenham Hotspur"],
@@ -1794,7 +1778,6 @@
   {
     "id": "17",
     "name": "Watford FC",
-    "logo": "http://localhost:3000/images/17.png",
     "results": [
       {
         "teams": ["Watford FC", "Liverpool FC"],
@@ -1906,7 +1889,6 @@
   {
     "id": "18",
     "name": "West Bromwich Albion",
-    "logo": "http://localhost:3000/images/18.png",
     "results": [
       {
         "teams": ["West Bromwich Albion", "AFC Bournemouth"],
@@ -2018,7 +2000,6 @@
   {
     "id": "19",
     "name": "West Ham United",
-    "logo": "http://localhost:3000/images/19.png",
     "results": [
       {
         "teams": ["Manchester United", "West Ham United"],
