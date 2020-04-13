@@ -1,4 +1,4 @@
-import mock from '../../../mock/teams.json';
+import mock from '../../mock/teams.json';
 
 const Teams = (req, res) => {
   const names = mock.map(item => item.name).sort();
