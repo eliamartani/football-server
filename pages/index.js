@@ -1,27 +1,32 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const Index = () => (
   <Layout>
-    <h1>football-server</h1>
-    <h2>`https` version</h2>
+    <h1>
+      football-server <i>api</i>
+    </h1>
+    <p>
+      Fork the project at{' '}
+      <a href="https://github.com/eliamartani/football-server" rel="noopener">
+        github
+      </a>
+      .
+    </p>
     <ul>
-      <li>
-        <Link href="/api/teams">/api/teams</Link>
-      </li>
-      <li>
-        <Link href="/api/teams/:teamId">/api/teams/:teamId</Link>
-      </li>
-      <li>
-        <Link href="/api/logos/:teamId">/api/logos/:teamId</Link>
-      </li>
-      <li>
-        <Link href="/api/weeks">/api/weeks</Link>
-      </li>
-      <li>
-        <Link href="/api/weeks/:weekIndex">/api/weeks/:weekIndex</Link>
-      </li>
+      <li>/api/teams</li>
+      <li>/api/teams/:teamId</li>
+      <li>/api/logos/:teamId</li>
+      <li>/api/weeks</li>
+      <li>/api/weeks/:weekIndex</li>
     </ul>
+    <p>
+      I just made an <i>https</i> version of it.
+    </p>
+    <style jsx>{`
+      a {
+        color: #000;
+      }
+    `}</style>
   </Layout>
 );
 
