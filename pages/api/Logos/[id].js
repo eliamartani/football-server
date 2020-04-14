@@ -1,6 +1,6 @@
+import absoluteUrl from 'next-absolute-url';
+import fetch from 'isomorphic-unfetch';
 import mock from '../../../mock/teams.json';
-import * as fs from 'fs';
-import { join } from 'path'
 
 const Logo = async (req, res) => {
   const {
@@ -16,10 +16,18 @@ const Logo = async (req, res) => {
     return;
   }
 
-  const imagesDirectory = join(process.env.PROJECT_DIRNAME, 'public/images/')
-  const buffer = fs.readFileSync(`${imagesDirectory}${id}.png`)
-  res.setHeader('Content-Type', 'image/png;charset=utf-8');
-  return res.status(200).send(buffer, 'binary');
+  try {
+    const { origin } = absoluteUrl(req, 'localhost:3000');
+    const url = `${origin}/images/${id}.png`;
+    const requestImage = await fetch(url);
+    const arrayBuffer = await requestImage.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer, 'utf-8');
+
+    res.setHeader('Content-Type', 'image/png;charset=utf-8');
+    res.status(200).send(buffer);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
 };
 
 export default Logo;
