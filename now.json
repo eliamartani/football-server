@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api", "status": 404, "dest": "/404" },
+    { "src": "/logos", "status": 404, "dest": "/404" }
+  ]
+}
