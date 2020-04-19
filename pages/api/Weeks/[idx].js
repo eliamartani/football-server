@@ -1,6 +1,9 @@
+import corsMiddleware from '../../../middlewares/cors';
 import mock from '../../../mock/weeks.json';
 
-const Weeks = (req, res) => {
+const Weeks = async (req, res) => {
+  await corsMiddleware(req, res);
+
   const {
     query: { idx },
   } = req;

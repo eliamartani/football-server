@@ -1,7 +1,10 @@
+import corsMiddleware from '../../../middlewares/cors';
 import mock from '../../../mock/teams.json';
 import mockWeeks from '../../../mock/weeks.json';
 
-const Teams = (req, res) => {
+const Teams = async (req, res) => {
+  await corsMiddleware(req, res);
+
   const {
     query: { id },
   } = req;

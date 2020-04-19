@@ -1,8 +1,11 @@
 import absoluteUrl from 'next-absolute-url';
 import fetch from 'isomorphic-unfetch';
+import corsMiddleware from '../../../middlewares/cors';
 import mock from '../../../mock/teams.json';
 
 const Logo = async (req, res) => {
+  await corsMiddleware(req, res);
+
   const {
     query: { id },
   } = req;
