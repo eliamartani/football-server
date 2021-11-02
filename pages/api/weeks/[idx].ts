@@ -1,13 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import corsMiddleware from '../../../middlewares/cors';
 import mock from '../../../mock/weeks.json';
 
-const Weeks = async (req, res) => {
+async function Weeks(req: NextApiRequest, res: NextApiResponse) {
   await corsMiddleware(req, res);
 
   const {
     query: { idx },
   } = req;
-  const index = idx || 0;
+  const index = Number(idx);
 
   if (isNaN(index) || index > mock.length - 1) {
     res.status(200).json({
@@ -19,9 +21,7 @@ const Weeks = async (req, res) => {
     return;
   }
 
-  const response = mock[index];
-
-  res.status(200).json(response);
-};
+  res.status(200).json(mock[index]);
+}
 
 export default Weeks;

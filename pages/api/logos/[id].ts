@@ -1,9 +1,11 @@
-import absoluteUrl from 'next-absolute-url';
-import fetch from 'isomorphic-unfetch';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
+
 import corsMiddleware from '../../../middlewares/cors';
 import mock from '../../../mock/teams.json';
 
-const Logo = async (req, res) => {
+async function Logo(req: NextApiRequest, res: NextApiResponse) {
   await corsMiddleware(req, res);
 
   const {
@@ -20,17 +22,19 @@ const Logo = async (req, res) => {
   }
 
   try {
-    const { origin } = absoluteUrl(req, 'localhost:3000');
-    const url = `${origin}/images/${id}.png`;
-    const requestImage = await fetch(url);
-    const arrayBuffer = await requestImage.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer, 'utf-8');
+    const fileName = path.join(
+      process.cwd(),
+      'public',
+      'images',
+      `${response.id}.png`
+    );
+    const fileContent = await fs.readFile(fileName);
 
     res.setHeader('Content-Type', 'image/png;charset=utf-8');
-    res.status(200).send(buffer);
+    res.status(200).send(fileContent);
   } catch (err) {
     res.status(500).json({ error: err });
   }
-};
+}
 
 export default Logo;

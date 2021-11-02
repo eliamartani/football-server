@@ -1,22 +1,28 @@
 {
-  "name": "football-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
+  "name": "football-server2",
+  "version": "1.1.0",
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "cors": "2.8.5",
-    "isomorphic-unfetch": "3.1.0",
-    "next": "11.1.2",
-    "next-absolute-url": "1.2.2",
+    "next": "12.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.2",
+    "typescript": "4.4.4"
   }
 }
