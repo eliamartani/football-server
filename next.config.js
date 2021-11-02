@@ -7,7 +7,7 @@ module.exports = {
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
-            value: 'https://eliamartani.github.io/',
+            value: 'https://eliamartani.github.io',
           },
         ],
       },
